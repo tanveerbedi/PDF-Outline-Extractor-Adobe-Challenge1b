@@ -10,8 +10,7 @@ The solution addresses real-world challenges like:
 * Extracting task-relevant content for distinct user personas (e.g., HR professionals, travel planners, chefs)
 * Providing high-precision summaries and rankings from multi-page PDFs
 
-Our system scales across multiple domains and datasets by utilizing keyword-driven scoring logic, document segmentation, and text ranking strategies.
-It was tested on diverse domains such as travel itineraries, HR compliance documents, and food preparation manuals to simulate real-world workflows and deliver targeted outputs.
+Our system scales across multiple domains and datasets by utilizing keyword-driven scoring logic, document segmentation, and text ranking strategies. It was tested on diverse domains such as travel itineraries, HR compliance documents, and food preparation manuals to simulate real-world workflows and deliver targeted outputs.
 
 ---
 
@@ -120,6 +119,26 @@ Once complete, you'll get:
 ```
 ✅ challenge1b_output.json created at: ./Collection N/
 ```
+
+---
+
+## 🐳 Docker Support
+
+This project includes a `Dockerfile` to streamline containerized deployment and testing. It encapsulates all dependencies and avoids local environment conflicts.
+
+### 🔧 Build the Docker Image
+
+```bash
+docker build -t pdf-extractor .
+```
+
+### ▶️ Run the Container
+
+```bash
+docker run --rm -v "$PWD/Collection 1:/app/Collection1" pdf-extractor
+```
+
+This mounts your local directory into the container and executes the script inside it. Make sure your PDFs and input JSON are placed inside the mounted `Collection1/` folder.
 
 ---
 
