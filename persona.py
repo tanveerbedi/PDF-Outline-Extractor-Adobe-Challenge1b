@@ -13,7 +13,6 @@ def load_input(input_path):
 
 
 def get_keywords(job_description):
-    # Simple keyword extraction: words longer than 3 characters
     words = job_description.lower().replace(",", "").split()
     keywords = [word for word in words if len(word) > 3]
     return keywords
@@ -73,7 +72,7 @@ def rank_sections(all_sections):
 
 
 def main():
-    input_file = Path("input/path")
+    input_file = Path("/app/input/challenge1b_input.json")
     base_dir = input_file.parent
     output_path = base_dir / "challenge1b_output.json"
     pdf_dir = base_dir / "PDFs"
@@ -112,6 +111,5 @@ def main():
     print("✅ challenge1b_output.json created at:", output_path)
 
 
-# 🔧 Corrected entry point
 if __name__ == "__main__":
     main()
