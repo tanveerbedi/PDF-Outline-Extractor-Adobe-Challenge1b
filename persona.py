@@ -73,7 +73,7 @@ def rank_sections(all_sections):
 
 
 def main():
-    input_file = Path(r"F:\Thapar\Semester 7\Adobe Hackathon\PDF-Outline-Extractor-main-Challenge_1b\Collection 1\challenge1b_input.json")
+    input_file = Path("input/path")
     base_dir = input_file.parent
     output_path = base_dir / "challenge1b_output.json"
     pdf_dir = base_dir / "PDFs"
