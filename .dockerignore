@@ -1,0 +1,19 @@
+# Ignore virtual environments, caches, IDE files, and large raw data
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.csv
+*.json
+*.db
+*.sqlite
+*.zip
+*.gz
+*.egg-info/
+venv/
+env/
+.idea/
+.DS_Store
+*.ipynb
+*.md
+*.pdf
